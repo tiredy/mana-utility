@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Source" pattern="file[mana-utility]:src/*||file:CMakeLists.txt||file:.gitignore||file[mana-utility]:windows/*||file[mana-utility]:test_exe/*||file[mana-utility]:linux/*" />
+</component>
