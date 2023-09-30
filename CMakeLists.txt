@@ -40,39 +40,8 @@ set(LIBRARY_SRC
         "${SRC_DIR}/gui/ManaColor.cpp"
         "${SRC_DIR}/gui/IconsMaterialDesign.h"
 )
-#set(LIBRARY_INCLUDE_DIRS "${SRC_DIR}" "${IMGUI_SRC_DIR}" "${GLFW_SRC_DIR}")
-#set(LIBRARY_LINK_LIBS imgui)
-#set(LIBRARY_LINK_DIRS "")
-#set(LIBRARY_OUTPUT_SUFFIX "")
-#
-#if(BUILD_FOR STREQUAL WIN32)
-#    set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS)
-#
-#    set(LIBRARY_LINK_DIRS "${LIBRARY_LINK_DIRS}" "${GLFW_SRC_DIR}/lib")
-#    set(LIBRARY_LINK_LIBS "${LIBRARY_LINK_LIBS}" "glfw3" "-lgdi32 -lopengl32 -static")
-#
-#    set(LIBRARY_OUTPUT_SUFFIX "win32")
-#elseif(BUILD_FOR STREQUAL UNIX)
-#    find_package(glfw3 REQUIRED)
-#    set(LIBRARY_LINK_LIBS glfw "-lGL")
-#
-#    set(LIBRARY_OUTPUT_SUFFIX "unix")
-#else()
-#    message( WARNING "BUILD_FOR is not set to UNIX nor WIN32, no targets will be built." )
-#endif()
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/windows")
 add_subdirectory("${CMAKE_SOURCE_DIR}/linux")
-
-#add_library(ManaLib SHARED "${LIBRARY_SRC}")
-#set_target_properties(ManaLib PROPERTIES
-#        OUTPUT_NAME "${BINARY_NAME}"
-#        PREFIX ""
-#)
-#
-#target_link_directories(ManaLib PUBLIC "${LIBRARY_LINK_DIRS}")
-#target_link_libraries(ManaLib PUBLIC "${LIBRARY_LINK_LIBS}")
-#
-#target_include_directories(ManaLib PUBLIC "${LIBRARY_INCLUDE_DIRS}")
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/test_exe")
