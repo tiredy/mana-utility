@@ -1,7 +1,9 @@
 
 // Copyright (c) 2023. tiredy
 //
-// this program is free software: you can redistribute it and/or modify
+// This file is part of mana-utility
+//
+// mana-utility is free software: you can redistribute it and/or modify
 // it under the terms of the gnu affero general public license as
 // published by the free software foundation, either version 3 of the
 // license, or (at your option) any later version.
